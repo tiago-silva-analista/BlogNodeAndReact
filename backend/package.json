@@ -1,0 +1,19 @@
+{
+  "name": "blog",
+  "version": "1.0.0",
+  "description": "Project to create a blog using node.js in the backend and reactJS on frontend",
+  "main": "index.js",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "corss": "^2.8.5",
+    "express": "^4.17.1",
+    "nodemon": "^2.0.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Tiago Santos da Silva",
+  "license": "ISC"
+}
