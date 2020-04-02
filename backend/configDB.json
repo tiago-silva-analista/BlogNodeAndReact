@@ -1,0 +1,8 @@
+{
+    "database_name": "BLUDB",
+    "database_user": "bpn07917",
+    "database_password": "x437d-d393fnm1p5",
+    "database_host": "dashdb-txn-sbox-yp-dal09-03.services.dal.bluemix.net",
+    "database_port": "50000",
+    "database_protocol": "TCPIP"
+}
