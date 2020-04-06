@@ -4,17 +4,24 @@ const connection = require('../database/connection');
 module.exports = {async index (request,response){
       
       
-         const query = 'select 1 as A, 2 as B from sysibm.sysdummy1';
-         const resp = connection.querySync(query);
-         console.log(JSON.stringify(resp)); 
-
-         const data= {
-            titulo: "Meu primeiro Post",
-            conteudo:"Era uma vez...",
-            autor: "Tiago Santos"
-         }
+         const query = 'select * from BPN07917.POSTS';
+         const data = connection.querySync(query);
+         console.log(data); 
         
          return response.json(data);
-    }    
+    },
+    
+    async create(request,response){
+
+      try{
+         const query = `INSERT INTO BPN07917.POSTS (cdTitle, dsContent, dsAuthor) VALUES ('${request.query.title}','${request.query.content}','${request.query.author}')`;
+         const data = connection.querySync(query);
+         console.log(data);      
+         return response.json('Command Executed with success!');
+      }catch(error){
+         return response.status(500).json(`Message: The command Failed. ${error} `)
+      }
+
+    }
     
 };
